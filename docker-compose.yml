@@ -11,17 +11,6 @@ services:
        MYSQL_PASSWORD: wordpress
      volumes:
        - './data/db:/var/lib/mysql:delegated'
-       
-   mysql:
-     image: mariadb
-     volumes:
-       - './data/db:/var/lib/mysql:delegated'
-     environment:
-       MYSQL_ROOT_PASSWORD: somewordpress
-       MYSQL_DATABASE: wordpress
-       MYSQL_USER: wordpress
-       MYSQL_PASSWORD: wordpress
-     restart: always
 
    wordpress:
      depends_on:
